@@ -1,0 +1,12 @@
+/log
+/tmp
+/db/*.sqlite3
+/public/system
+/spec/tmp
+**.orig
+config/database.yml
+.DS_Store
+.env
+
+/.bundle
+/vendor/bundle
