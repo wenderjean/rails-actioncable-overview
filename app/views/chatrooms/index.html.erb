@@ -1,0 +1,27 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		Welcome to Chatrooms
+	</div>
+  	<div class="panel-body">
+  		Select the chatrooms below or create a new one.
+  		<br/>
+  		<%= link_to 'New Chatroom', new_chatroom_url %>
+  	</div>
+
+  	<table class="table">
+		<tr>
+			<th>Topic</th>
+			<th style="width: 5%;" class="text-center">#</th>
+		</tr>
+		<% @chatrooms.each do |chatroom| %>
+		<tr>
+			<td><%= chatroom.topic %></td>
+			<td class="text-center">
+				<%= link_to chatroom_url(chatroom), class: 'btn btn-default btn-xs' do %>
+					<i class="glyphicon glyphicon-share-alt"></i>
+				<% end %>
+			</td>
+		</tr>
+		<% end %>
+	</table>
+</div>

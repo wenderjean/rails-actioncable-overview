@@ -1,0 +1,13 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<%= @chatroom.topic %>
+	</div>
+  	<div class="panel-body">
+  		<% if @chatroom.messages.any? %>
+  		<%= render partial: 'messages/messages', collection: @chatroom.messages, as: :message %>
+  		<% else %>
+  		There are no messages yet!
+  		<% end %>
+  		<%= render partial: 'messages/form', locals: { message: @message } %>
+  	</div>
+</div>
