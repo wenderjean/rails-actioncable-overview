@@ -2,12 +2,13 @@
 	<div class="panel-heading">
 		<%= @chatroom.topic %>
 	</div>
-  	<div class="panel-body">
-  		<% if @chatroom.messages.any? %>
-  		<%= render partial: 'messages/messages', collection: @chatroom.messages, as: :message %>
-  		<% else %>
-  		There are no messages yet!
-  		<% end %>
-  		<%= render partial: 'messages/form', locals: { message: @message } %>
-  	</div>
+
+  <% if @chatroom.messages.any? %>
+    <div id="messages" class="panel-body">
+      <%= render partial: 'messages/messages', collection: @chatroom.messages, as: :message %>
+    </div>
+  <% else %>
+    <div id="messages" class="panel-body"></div>
+  <% end %>	
+	<%= render partial: 'messages/form', locals: { message: @message } %>
 </div>
