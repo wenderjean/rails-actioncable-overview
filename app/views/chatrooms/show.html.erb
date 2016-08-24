@@ -8,7 +8,7 @@
       <%= render partial: 'messages/messages', collection: @chatroom.messages, as: :message %>
     </div>
   <% else %>
-    <div id="messages" class="panel-body"></div>
-  <% end %>	
+    <div id="messages" class="panel-body">No messages yet!</div>
+  <% end %>
 	<%= render partial: 'messages/form', locals: { message: @message } %>
 </div>

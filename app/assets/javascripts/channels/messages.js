@@ -4,6 +4,6 @@ App.messages = App.cable.subscriptions.create('MessagesChannel', {
 		return $('#messages').append(this.renderMessage(data));
 	},
 	renderMessage: function(data) {
-		return '<span class="badge">' + data.user + '</span>:' + data.message + '<hr/>';
+		return '<span class="badge">' + data.user + '</span>' + data.message + '<hr/>';
 	}
 });
