@@ -17,7 +17,7 @@ RSpec.describe ChatroomsController, type: :controller do
       context 'chatroom with right params' do
         it 'returns http success' do
           post :create, params: { chatroom: attributes_for(:chatroom) }
-          expect(subject).to redirect_to(chatrooms_path)
+          expect(subject).to redirect_to proc { chatroom_url(assigns[:chatroom]) }
         end
 
         it 'saves the cast' do

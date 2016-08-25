@@ -30,6 +30,7 @@ gem 'redis', '~> 3.0'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  gem 'rails-controller-testing'
 	gem 'rspec-rails', '~> 3.5'
 	gem 'factory_girl_rails'
 	gem 'shoulda-matchers', '~> 3.1'
