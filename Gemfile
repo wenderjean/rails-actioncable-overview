@@ -5,6 +5,7 @@ gem 'sqlite3'
 gem 'simple_form'
 gem "responders"
 gem 'devise'
+gem 'friendly_id', '~> 5.1'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'

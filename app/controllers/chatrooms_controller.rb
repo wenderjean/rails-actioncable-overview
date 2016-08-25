@@ -6,7 +6,7 @@ class ChatroomsController < ApplicationController
 	end
 
 	def show
-		@chatroom = Chatroom.find_by_id(params[:id])
+		@chatroom = Chatroom.friendly.find(params[:id])
 		@message = Message.new
 	end
 
@@ -15,9 +15,9 @@ class ChatroomsController < ApplicationController
 	end
 
 	def create
-		chatroom = Chatroom.new(chatroom_params)
-		chatroom.save
-		respond_with chatroom, location: -> { chatrooms_url }
+		@chatroom = Chatroom.new(chatroom_params)
+    @chatroom.save
+    respond_with @chatroom
 	end
 
 	private

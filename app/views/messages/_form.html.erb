@@ -1,7 +1,7 @@
 <%= simple_form_for @message, remote: true do |f| %>
   <%= f.input :chatroom_id, as: :hidden, input_html: { value: @chatroom.id } %>
   <div class="panel-footer">
-	<%= f.input :content, as: :text, label: false, placeholder: 'Say hello', class: 'form-control' %>
+	<%= f.input :content, as: :text, label: false, placeholder: 'Say hello', autofocus: true, class: 'form-control' %>
 	<%= f.submit 'Send', class: 'btn btn-primary' %>
 	<%= link_to chatrooms_url, class: 'btn btn-danger' do %>
 		<i class="glyphicon glyphicon-log-out"></i>
